@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Moneda } from 'src/app/model/moneda';
 import { Operacion } from 'src/app/model/operacion';
@@ -19,7 +20,7 @@ export class ListarComponent implements OnInit {
   mensaje: String;
   show: boolean;
 
-  constructor(private service:ListarService, private service1:TipoCambioService, private router:Router) { 
+  constructor(private service:ListarService, private service1:TipoCambioService, private router:Router, private dialog:MatDialog) { 
     this.monedas = [];
     this.moneda1 = new Moneda();
     this.moneda2 = new Moneda();
@@ -40,18 +41,26 @@ export class ListarComponent implements OnInit {
   }
 
   calcularTipoCambio(){
-    console.log(this.operacion);
-    this.operacion.idMoneda1 = this.moneda1.id;
-    this.operacion.idMoneda2 = this.moneda2.id;
-    this.service1.calcularTipoCambio(this.operacion)
-    .subscribe(data=>{
-      this.operacion=data;
+    if(this.moneda1.id !== this.moneda2.id){
+      this.operacion.idMoneda1 = this.moneda1.id;
+      this.operacion.idMoneda2 = this.moneda2.id;
+      this.service1.calcularTipoCambio(this.operacion)
+      .subscribe(data=>{
+        this.operacion=data;
+        this.show = true;
+      })
+    } else {
+      this.operacion.cambio = 1;
+      this.operacion.montoCambio = this.operacion.monto;
       this.show = true;
-    })
+    }
+
   }
 
   changeMoneda(moneda: Moneda){
+    this.operacion.montoCambio = 0;
     this.show = false;
+    this.calcularTipoCambio();
   }
 
 }

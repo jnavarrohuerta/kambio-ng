@@ -1,1 +1,44 @@
-<p>actualizar works!</p>
+<style>
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<div class="form">
+    <h1>Actualizar Tipo de Cambio</h1>
+    <div class="row">
+        <mat-form-field appearance="fill">
+            <mat-label>Escoge una moneda</mat-label>
+            <mat-select [(value)]="moneda1" (selectionChange)="changeMoneda(moneda1)">
+                <mat-option *ngFor="let moneda of monedas" [value]="moneda">
+                    {{moneda.nombre}} ({{moneda.codigo}})
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="fill">
+            <mat-label>Escoge una moneda</mat-label>
+            <mat-select [(value)]="moneda2" (selectionChange)="changeMoneda(moneda2)">
+                <mat-option *ngFor="let moneda of monedas" [value]="moneda">
+                    {{moneda.nombre}} ({{moneda.codigo}})
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo de Cambio</mat-label>
+            <input matInput matInput [(ngModel)]='tipoCambio.cambio'>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <button (click)="actualizarTipoCambio()" mat-raised-button color="primary">Actualizar</button>
+    </div>
+</div>
