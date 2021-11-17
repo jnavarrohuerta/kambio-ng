@@ -18,4 +18,8 @@ export class AppComponent {
   registrarTipoCambio(){
     this.router.navigate(['registrar'])
   }
+
+  actualizarTipoCambio(){
+    this.router.navigate(['actualizar'])
+  }
 }

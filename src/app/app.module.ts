@@ -14,12 +14,16 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import { ActualizarComponent } from './tipoCambio/actualizar/actualizar.component';
+import { TipoCambioService } from './service/tipo-cambio.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    ActualizarComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +33,10 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
   ],
-  providers: [ListarService],
+  providers: [ListarService, TipoCambioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

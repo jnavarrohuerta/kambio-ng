@@ -34,135 +34,6 @@
     flex: 1;
   }
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
-
-  .toolbar img {
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-  }
-
-  .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
-    opacity: 0.8;
-  }
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
-
-  .card svg.material-icons path {
-    fill: #888;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
-
-  .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .card.card-small {
-    height: 16px;
-    width: 168px;
-  }
-
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-  svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
-  }
-
-  svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
-  }
-
   a,
   a:visited,
   a:hover {
@@ -174,162 +45,66 @@
     color: #125699;
   }
 
-  .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
+  .banner {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-
-  .circle-link {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin: 8px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    display: flex;
-    justify-content: center;
+    background: #002A8D;
+    height: 60px;
     align-items: center;
+    padding: 0 20px;
+  }
+
+  .logo {
+    content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA3MiAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjcyIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDAyQThEIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTcuOTE2NCAxNS40NzU0QzE3LjkxNjQgMTUuNDc1NCAxNy43Nzk2IDE2LjE1OCAxOC4zNzg0IDE2LjIxNDVDMTguNjgxMiAxNi4yMjQ3IDE5LjAwMzEgMTYuMjI0NyAxOS4zNDE0IDE2LjIyNDdDMjEuNTAwNCAxNi4yMjQ3IDIzLjQ3NTYgMTUuMzg5NiAyMy41MTk4IDEzLjMzODJDMjMuNTYwNSAxMS41MjAxIDIyLjAyMzQgMTAuOTcyMiAyMC4xNzEyIDEwLjk3MjJIMTguODY0M0wxNy45MTY0IDE1LjQ3NTRaTTI3LjcxMTggMTMuNDM4NUMyNy43MTE4IDE2LjE1OTMgMjUuNTQxNiAxOS43NDg4IDE4LjAzNTcgMTkuMzA3QzE3LjE1NiAxOS4yNTQ3IDE2LjYxNTUgMTkuMTc4MyAxNS44MjIgMTguOTczMUMxMi45OTQ4IDE4LjI0MDggMTMuOTg5MyAxNC43Mjk5IDEzLjk4OTMgMTQuNzI5OUwxNi44NjYgMS4xNDM3N0MxOC40NDkgMC44NzIzMjkgMjAuMjI0MiAwLjcwNzUxIDIyLjA0NzggMC43MDc1MUMyNi4wNjIyIDAuNzA3NTEgMjguNzIyMyAyLjIxNTA5IDI4LjcyMjMgNS4wMzY1NkMyOC43MjIzIDcuNjc4MzMgMjYuMjk5NiA5LjExNDEyIDI0LjQ2NTcgOS40Mzk1MUMyNS45MTkgOS41NTM3OCAyNy43MTE4IDEwLjczNDMgMjcuNzExOCAxMy40Mzg1Wk0yMC4zNzIzIDMuODYyNDJMMTkuNjQ2NiA3LjM2MjdDMTkuNjQ2NiA3LjM2MjcgMTkuNDY2MyA4LjExMjAzIDIwLjA4MSA4LjExMjAzSDIwLjkyNzZDMjMuMTA1NCA4LjExMjAzIDI0LjYxMzcgNy4yMTQwMyAyNC42NTE2IDUuNjMyMUMyNC42ODIzIDQuMzI3MTUgMjMuNjE0OCAzLjc2MTc1IDIyLjA5ODggMy43NjE3NUMyMS40MDU5IDMuNzYxNzUgMjAuNjc4MiAzLjgxMTQ1IDIwLjM3MjMgMy44NjI0MlpNNDYuMDY1MyAxOS4zNTZINDMuNjgyNUw0Ny40NjA4IDEuMjQ0NjJDNDkuMDIzNCAwLjg2MDE4MSA1MC42NjgyIDAuNzg0MTQ0IDUyLjU3MzEgMC44MDExMzVDNTcuMjIyNyAwLjgyMDY3NiA1OS4zNTQyIDIuNjkyNzMgNTkuMzU0MiA1Ljk1NTk4QzU5LjM1NDIgOC45NDYwOCA1Ny4xMTc4IDEzLjM0NTYgNTAuNjg3IDEzLjM0NTZDNTAuMDI4MyAxMy4zNDU2IDQ5LjQ2MTggMTMuMjY2MiA0OS4wNTI5IDEzLjIzNzNDNDkuMDUyOSAxMy4yMzczIDQ4LjUyOTEgMTUuNzU1NSA0OC4yMTc2IDE3LjIzOTNDNDcuODI1IDE5LjEwMiA0Ni42NzQ5IDE5LjM1NiA0Ni4wNjUzIDE5LjM1NlpNNTEuMjM0MyAzLjk5NDI5TDUwLjE4MzkgOS4wNDQyQzUwLjE4MzkgOS4wNDQyIDQ5Ljg0NTIgMTAuMTE3NyA1MS4wNTQ0IDEwLjExNzdDNTEuMjAzNiAxMC4xMjQ0IDUxLjM2NTYgMTAuMTI5MSA1MS41NDM5IDEwLjEyOTFDNTQuMjQ3MSAxMC4xMDcgNTUuNjM1NCA4LjIyOTg4IDU1LjYzNTQgNi4yODY0NkM1NS42MzU0IDQuMzc0NDggNTQuMzk0NyAzLjkwNDIzIDUyLjkwMTEgMy45MDQyM0M1Mi4xMzgzIDMuOTA0MjMgNTEuNTY1OCAzLjk0MjQ2IDUxLjIzNDMgMy45OTQyOVpNMzQuMjUwMSAxMS4zNTQzQzM0LjI1MDEgMTQuMjEzMiAzNS44MDk1IDE2LjA0MTEgMzguNDg0OCAxNi4wNDExQzM5LjU4NjIgMTYuMDQxMSA0MC43ODk4IDE1Ljg0NDQgNDIuNDEzMSAxNC41NzY4TDQxLjc3NjggMTcuNjIxN0M0MS43NzY4IDE3LjYyMTcgNDEuNiAxOC42MzE5IDQwLjU0NTcgMTkuMDI0NEMzOS42ODkyIDE5LjM2NjMgMzguNzg1NiAxOS41MjE4IDM3LjQxNiAxOS41MjE4QzMzLjYwMSAxOS41MjE4IDI5Ljg3ODIgMTcuNTIxOSAyOS44NzgyIDExLjU5NkMyOS44NzgyIDYuMDUyOTUgMzMuMjE0MSAwLjQxODk0NSAzOS42NTM2IDAuNDE4OTQ1QzQwLjkxNzEgMC40MTg5NDUgNDEuODEwMyAwLjYwODQwMiA0Mi45NTQgMS4wMDEzM0M0NC43MTc3IDEuNjA3MDkgNDQuOTMxOSAyLjYyNDA0IDQ0LjgxNTEgMy4yMzM2MUM0NC42OTU4IDMuODU3NjMgNDQuMjc5NyA1LjM1NzE0IDQ0LjI3OTcgNS4zNTcxNEM0My4xNzAyIDQuMzAxOTYgNDEuMjM3OCA0LjAwNTAzIDQwLjE2MzUgNC4wMDUwM0MzNi4wNDczIDQuMDA1MDMgMzQuMjUwMSA4LjQwNjI5IDM0LjI1MDEgMTEuMzU0M1pNNy4wNTIwNSA4Ljk4Nzk2QzUuNjEyNyA3LjMyNjE4IDQuMDk0MzUgNi4zMjE1NSAyLjk3MzM1IDUuNzQ4OTNDMi45NzMzNSA1Ljc0ODkzIDIuNDI3MjEgNS40NjA1IDIuMTQxOTcgNS4yOTQ4M0MyLjU1NzY2IDQuMjk5OTcgMy4xMDQ2IDMuNTg5MjkgMy4xMDQ2IDMuNTg5MjlDMy4xODE5OSAzLjQ4MTgyIDQuODM4NzYgMS40MDg4NCA2LjI5NjA3IDIuMTM2OTNDNy44ODc4MiAyLjg5OTQzIDguMDQ5NzkgNi4zOTkyOCA3LjA1MjA1IDguOTg3OTZaTTY2LjE4NDkgOC45ODc5NkM2NC43NDU2IDcuMzI2MTggNjMuMjI3MiA2LjMyMTU1IDYyLjEwNjIgNS43NDg5M0M2Mi4xMDYyIDUuNzQ4OTMgNjEuNTYwMSA1LjQ2MDUgNjEuMjc0OCA1LjI5NDgzQzYxLjY5MDUgNC4yOTk5NyA2Mi4yMzc1IDMuNTg5MjkgNjIuMjM3NSAzLjU4OTI5QzYyLjMxNDkgMy40ODE4MiA2My45NzE2IDEuNDA4ODQgNjUuNDI5IDIuMTM2OTNDNjcuMDIwNyAyLjg5OTQzIDY3LjE4MjcgNi4zOTkyOCA2Ni4xODQ5IDguOTg3OTZaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTExLjk5MDYgMTEuNjM0NEMxMC40Mzg3IDE0LjI3MzcgNi4yMDUyNiAxNy4yODIgNS4wMDU2NiAxNy43MzMyQzIuNjcyNjkgMTguNzcyNiAxLjA5MzMxIDE2Ljg0NDkgMC45NTg0NzQgMTYuNjQyN0MwLjUyMzIzNyAxNi4wNDU5IDAuNDE3NTIgMTUuOTE5NyAwLjIwNjg4MiAxNS40ODQzQzAuMTY1NzkyIDE1LjU1NjUgNC42ODUzMiAxMy4zMTc5IDYuMzA0NTkgMTAuNDIxN0M4LjA1ODMgNy45MzQwOSA4LjIxMTEgMy4wNTQ1MSA2LjI5NTgxIDIuMTM2OTZDNi44NzUwNyAyLjQ0NzQ5IDguMjM5ODIgMy4yODE3NyA5LjQ3MTMzIDQuNDUwMzdDMTAuNyA1LjU1OTUgMTEuNzYyIDcuMDEzOTkgMTEuNzM5MyA2Ljk5NTNDMTEuODY4OSA3LjE4MjYzIDEzLjQwOCA5LjIyMjQ4IDExLjk5MDYgMTEuNjM0NFpNNzAuODcyMSA2Ljk5NTNDNzEuMDAxOCA3LjE4MjYzIDcyLjU0MDkgOS4yMjI0OCA3MS4xMjM1IDExLjYzNDRDNjkuNTcyIDE0LjI3MzcgNjUuMzM4MSAxNy4yODIgNjQuMTM4NSAxNy43MzMyQzYxLjgwNTYgMTguNzcyNiA2MC4yMjYyIDE2Ljg0NDkgNjAuMDkxMyAxNi42NDI3QzU5LjY1NjEgMTYuMDQ1OSA1OS41NTA0IDE1LjkxOTcgNTkuMzM5NyAxNS40ODQzQzU5LjI5ODYgMTUuNTU2NSA2My44MTg2IDEzLjMxNzkgNjUuNDM3NCAxMC40MjE3QzY3LjE5MTIgNy45MzQwOSA2Ny4zNDM5IDMuMDU0NTEgNjUuNDI4NyAyLjEzNjk2QzY2LjAwNzkgMi40NDc0OSA2Ny4zNzI3IDMuMjgxNzcgNjguNjA0MiA0LjQ1MDM3QzY5LjgzMjkgNS41NTk1IDcwLjg5NTMgNy4wMTM5OSA3MC44NzIxIDYuOTk1M1oiIGZpbGw9IiNGRjc4MDAiLz4KPC9zdmc+Cg==);
+    height: 20px;
+  }
+
+  .options {
+    display: flex;
+    justify-content: right;
+    padding: 0 20px;
+  }
+
+  .item {
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 0 10px;
   }
 
-  .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  footer {
-    margin-top: 8px;
+  .main {
     display: flex;
-    align-items: center;
-    line-height: 20px;
+    flex-direction: column;
   }
 
-  footer a {
+  .sidebar {
     display: flex;
-    align-items: center;
+    max-width: 100px;
   }
 
-  .github-star-badge {
-    color: #24292e;
+  .content-1 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27,31,35,.2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
-  }
-
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
-    background-position: -.5em;
-  }
-
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
+    padding: 20px 10px;
   }
 </style>
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span>Welcome</span>
-    <div class="spacer"></div>
-    <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
-      <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-        <rect width="400" height="400" fill="none"/>
-        <path d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" fill="#fff"/>
-      </svg>
-    </a>
-    <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
-      <svg id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
-        <path d="M0 0h24v24H0V0z" fill="none"/>
-        <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
-      </svg>
-    </a>
-</div>
-
-<div class="content" role="main">
-
-  <button class="btn btn-info" (click)='listarTipoCambio()'>Tipo de Cambio</button>
-  <button class="btn btn-info" (click)='registrarTipoCambio()'>Registrar Tipo de Cambio</button>
-
+<div class="wrapper">
+  <div class="banner">
+    <img class="logo">
+    <div class="options">
+      <div (click)='listarTipoCambio()' class="item">Tipo de Cambio</div>
+      <div (click)='actualizarTipoCambio()' class="item">Actualizar Tipo de Cambio</div>
+    </div>
+  </div>
+  <div class="content-1">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -340,4 +115,3 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<router-outlet></router-outlet>
